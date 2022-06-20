@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update SHA
-        run: echo "VERSION = \"{{ github.ref_name }}/{{ github.sha }}\""" > Scripts/version.lua
+        run: echo "VERSION = \"{{ github.ref_name }}/{{ github.sha }}\"" > Scripts/version.lua
