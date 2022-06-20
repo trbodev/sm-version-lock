@@ -1,0 +1,9 @@
+{
+   "allow_add_mods" : false,
+   "custom_icons" : false,
+   "description" : "This mod doesn't have a description",
+   "localId" : "9a06ffaa-aa04-4041-a6a4-a759acb118ef",
+   "name" : "Version Lock",
+   "type" : "Custom Game",
+   "version" : 0
+}

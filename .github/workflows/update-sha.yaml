@@ -1,0 +1,13 @@
+name: 'Update SHA'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update SHA
+        run: echo "VERSION = \"{{ github.ref_name }}/{{ github.sha }}\""" > Scripts/version.lua
