@@ -9,5 +9,17 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
       - name: Update SHA
         run: echo "VERSION = \"{{ github.ref_name }}/{{ github.sha }}\"" > Scripts/version.lua
+      - name: '`git config`'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: '`git push`'
+        run:  |
+          git add -A
+          git commit -m '[automated commit] update files'
+          git push
